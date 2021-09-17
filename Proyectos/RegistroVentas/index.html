@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros</title>
+</head>
+<body">
+    <div id="titulo">
+        <h1 style="text-align: center">Registro de ventas</h1>
+    </div>
+    <div id="entrada">
+        <fieldset>
+            <legend>Favor de registrar la venta</legend>
+            <form>
+                <br>
+                <label for="">ID: </label>
+                <input type="number" id="id" style="width: 250px;" required>
+                <br><br>
+                <label for="">Producto: </label>
+                <input type="text" id="producto" style="width: 208px;" required>
+                <br><br>
+                <label for="">Precio Unitario: $ </label>
+                <input type="number" id="precio" style="width: 155px;" required>
+                <br><br>
+                <label for="">Cantidad: </label>
+                <input type="number" id="cantidad" style="width: 206px;" required>
+                <br><br>
+                <label for="">Total: $ </label>
+                <input type="number" id="total" style="width: 150px;" readonly required>
+                <button type="button" onclick="calcularTotal()">Calcular</button>
+                <br><br>
+                <button type="button" onclick="addVenta()" style="width: 138px; text-align: center;">Guardar venta</button>
+                <button type="button" onclick="deleteVenta()" style="width: 138px; text-align: center;">Eliminar venta</button>
+            </form>
+        </fieldset>
+    </div>
+    <div id="registro">
+        <fieldset>
+            <legend>Datasource</legend>
+            <form>
+                <table id="tabla" border="">
+                    <tr>
+                        <th>ID</th>
+                        <th>PRODUCTO</th>
+                        <th>PRECIO UNITARIO</th>
+                        <th>CANTIDAD</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
