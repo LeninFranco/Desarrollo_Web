@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Listas</title>
+</head>
+<body>
+    <!--
+        ul -> unordered list: Se utiliza cuando el orden de los elementos no influye
+        ol -> ordered list: se utiliza cuando el orden de los elementos si importa
+        Cada elemento de la lista se usa la etiqueta li, sirve para ul y ol
+        dl -> definition list: se utiliza para hacer lista de definiciones (diccionario)
+        Cada elemento de una lista de definicion lleva dos etiquetas dt para el concepto y 
+        dd es para la definicion de ese concepto
+    -->
+    <h1>Listas</h1>
+    <section>
+        <h2>Unordered List</h2>
+        <p>Lista de Compra</p>
+        <ul>
+            <li>Pan</li>
+            <li>Maruchan</li>
+            <li>Leche</li>
+            <li>Huevo</li>
+            <li>Arroz</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Ordered List</h2>
+        <p>Top de mis juegos favoritos</p>
+        <ol>
+            <li>Halo</li>
+            <li>Dark Souls</li>
+            <li>Gears of War</li>
+            <li>Smackdown vs Raw 2008</li>
+            <li>Mortal Kombat</li>
+        </ol>
+    </section>
+    <section>
+        <h2>Definition List</h2>
+        <p>Lenguajes de Desarrollo Web</p>
+        <dl>
+            <dt>HTML</dt><dd>Es el formato básico de los documentos que componen las páginas web, está basado en etiquetas y sirve para estructurar la forma de mostrar los contenidos de las páginas.</dd>
+            <br>
+            <dt>CSS</dt><dd>Las hojas de estilo en cascada sirven para favorecer estéticamente los elementos y contenidos estructurados a través de las etiquetas HTML, dotándoles de personalidad en cuanto a su diseño, forma y colores.</dd>
+            <br>
+            <dt>Javascript</dt><dd>Es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, ​ basado en prototipos, imperativo, débilmente tipado y dinámico.</dd>
+        </dl>
+    </section>
+    <!--
+        Atributos de las listas
+        ol ->
+            type: Estilo de numeracion (1,A,a,I,i)
+            start: Inicio de la secuencia (un número)
+        ul ->
+            type: Estilo del item (disc, square, circle)
+    -->
+    <section>
+        <h2>Atributos de las listas</h2>
+        <ul type="disc">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+        <ul type="square">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+        <ul type="circle">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+        <ol type="1">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+        <ol type="A">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+        <ol type="I">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+        <ol type="a">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+        <ol type="i">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+    </section>
+</body>
+</html>

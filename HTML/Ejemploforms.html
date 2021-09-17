@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="author" content="Lenin Eduardo Franco Aguilar" />
+    <title>.: Formulario :.</title>
+</head>
+<style>
+    .texto{
+        color: darkblue;
+    }
+</style>
+<body>
+    <form action="">
+        <div>
+            <fieldset>
+                <legend>Datos generales</legend>
+                <input type="text" id="Nombre">&nbsp;<input type="text" id="ApellidoM">&nbsp;<input type="text" id="ApellidoP">
+                <br>
+                <label class="texto">Nombre(s)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="texto">Apellido Materno</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="texto">Apellido Paterno</label>
+                <br><br>
+                <label class="texto"><input type="radio" name="sexo" id="M" value="Masculino">Masculino</label>&nbsp;
+                <label class="texto"><input type="radio" name="sexo" id="F" value="Femenino">Femenino</label>&nbsp;
+                <label class="texto"><input type="radio" name="sexo" id="O" value="Otro">Otro</label>
+                <br><br>
+                <label class="texto"><input type="checkbox" name="intereses" value="Musica" id="chM">Musica</label>
+                <label class="texto"><input type="checkbox" name="intereses" value="Deportes" id="chD">Deportes</label>
+                <label class="texto"><input type="checkbox" name="intereses" value="Libros" id="chL">Libros</label>
+                <label class="texto"><input type="checkbox" name="intereses" value="Videojuegos" id="chV">Videojuegos</label>
+                <br><br>
+                <label class="texto">Edad: </label>
+                <select id="edad">
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    <option value="49">49</option>
+                    <option value="50">50</option>
+                    <option value="51">51</option>
+                    <option value="52">52</option>
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                </select>
+                <br><br>
+                <label class="texto">Escribe un comentario: </label>
+                <br>
+                <textarea id="comentarios" cols="74" rows="10"></textarea>
+                <br><br>
+                <button type="button" onclick="enviar()">Enviar</button>
+                <button type="submit">Enviar (submit)</button>
+                <button type="reset">Limpiar</button>
+            </fieldset>
+        </div>
+    </form>
+</body>
+<script>
+    function enviar() {
+        if(validar()){
+            let nombre = document.getElementById("Nombre").value + " " + document.getElementById("ApellidoM").value + " " + document.getElementById("ApellidoP").value; 
+            let opciones = document.getElementsByName("sexo");
+            let genero;
+            let intereses = [];
+            for(let i = 0; i < opciones.length;i++){
+                if(opciones[i].checked){
+                    genero = opciones[i].value;
+                }
+            }
+            opciones = document.getElementsByName("intereses");
+            for(let i = 0; i < opciones.length;i++){
+                if(opciones[i].checked){
+                    intereses.push(opciones[i].value);
+                }
+            }
+            let edad = document.getElementById("edad").value;
+            alert("Hola " + nombre + "\nTu sexo es: " + genero + "\nTu edad es: " + edad + "\nTus intereses son: " + intereses);
+            alert("La neta me da hueva leer tu comentario asi que ta bien XD");
+            limpiar();
+        }
+        else{
+            alert("Favor de llenar todo");
+        }
+    }
+    function validar() {
+        let inNombre = document.getElementById("Nombre").value;
+        let inApM = document.getElementById("ApellidoM").value;
+        let inApP = document.getElementById("ApellidoP").value;
+        let rdM = document.getElementById("M").checked;
+        let rdF = document.getElementById("F").checked;
+        let rdO = document.getElementById("O").checked;
+        let chM = document.getElementById("chM").checked;
+        let chD = document.getElementById("chD").checked;
+        let chL = document.getElementById("chL").checked;
+        let chV = document.getElementById("chV").checked;
+        if((inNombre == "" || inApM == "" || inApP == "") || (!rdM && !rdF && !rdO) || (!chM && !chD && !chL && !chV)){
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>

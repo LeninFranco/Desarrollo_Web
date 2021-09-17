@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="author" content="Equipo 1"/>
+    <title>.: Formulario :.</title>
+</head>
+<body>
+    <h1 style="text-align: center;">FAVOR DE LLENAR EL SIGUIENTE FORMULARIO</h1>
+    <form action="respuesta.html" target="_blank">
+        <fieldset>
+            <legend>Nombre Completo</legend>
+            <table>
+                <tr>
+                    <td><input type="text" id="nombre" required></td>
+                    <td><input type="text" id="apellidom" required></td>
+                    <td><input type="text" id="apellidop" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Nombre(s)">Nombre(s)</label></td>
+                    <td><label for="ApellidoMaterno">Apellido Materno</label></td>
+                    <td><label for="ApellidoPaterno">Apellido Paterno</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Domicilio</legend>
+            <table>
+                <tr>
+                    <td><input type="text" id="calle" required></td>
+                    <td><input type="number" id="no" required></td>
+                    <td><input type="text" id="colonia" required></td>
+                    <td><input type="number" id="cp" required></td>
+                    <td>    
+                        <select name="listas" id="delegacion">
+                            <option selected>Delegaci&oacute;n</option>
+                            <option>Gustavo A. Madero</option>
+                            <option>&Aacute;lvaro Obreg&oacute;n</option>
+                            <option>Azcapotzalco</option>
+                            <option>Coyoac&aacute;n</option>
+                            <option>Benito Ju&aacute;rez</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>   
+                    <td><label for="Calle">Calle</label></td> 
+                    <td><label for="No">No.</label></td>
+                    <td><label for="Colonia">Colonia</label></td>
+                    <td><label for="CP">CP</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Datos Generales</legend>
+            <label for="Sexo">Sexo</label>
+            <br>
+            <label for="Hombre"><input type="radio" id="hombre" name="sexo" checked>Hombre</label><label for="Mujer"><input type="radio" id="mujer" name="sexo">Mujer</label><label for="Otro"><input type="radio" id="otro" name="sexo">Otro</label>
+            <br><br>
+            <label for="FechaNacimiento">Fecha de Nacimiento: <input type="date" id="date" required></label>
+            <br><br>
+            <label for="CURP">CURP: <input type="text" id="curp" maxlength="18" required></label>
+        </fieldset>
+        <fieldset>
+            <legend>Experiencia con Lenguajes de Programaci&oacute;n</legend>
+            <table>
+                <tr>
+                    <td><label for="C"><input type="checkbox" name="lenguajes" id="c">C</label></td>
+                    <td><label for="Ruby"><input type="checkbox" name="lenguajes" id="ruby">Ruby</label></td>
+                </tr>
+                <tr>
+                    <td><label for="C++"><input type="checkbox" name="lenguajes" id="cpp">C++</label></td>
+                    <td><label for="Perl"><input type="checkbox" name="lenguajes" id="perl">Perl</label></td>
+                </tr>
+                <tr>
+                    <td><label for="Java"><input type="checkbox" name="lenguajes" id="java">Java</label></td>
+                    <td><label for="R"><input type="checkbox" name="lenguajes" id="r">R</label></td>
+                </tr>
+                <tr>
+                    <td><label for="Python"><input type="checkbox" name="lenguajes" id="python">Python</label></td>
+                    <td><label for="Javascript"><input type="checkbox" name="lenguajes" id="javascript">Javascript</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Hobbies y Pasatiempos</legend>
+            <table>
+                <tr>
+                    <td><label for="Leer"><input type="checkbox" name="hobby" id="leer">Leer</label></td>
+                    <td><label for="Videojuegos"><input type="checkbox" name="hobby" id="videojuegos">Videojuegos</label></td>
+                    <td><label for="TV"><input type="checkbox" name="hobby" id="tv">Ver TV</label></td>
+                </tr>
+                <tr>
+                    <td><label for="Deporte"><input type="checkbox" name="hobby" id="deporte">Practicar Deporte</label></td>
+                    <td><label for="Cine"><input type="checkbox" name="hobby" id="cine">Ir al Cine</label></td>
+                    <td><label for="Musica"><input type="checkbox" name="hobby" id="tv">Escuchar M&uacute;sica</label></td>
+                </tr>
+                <tr>
+                    <td><label for="Coleccionar"><input type="checkbox" name="hobby" id="coleccionar">Coleccionar cosas</label></td>
+                    <td><label for="Navegar"><input type="checkbox" name="hobby" id="navegar">Navegar en Internet</label></td>
+                    <td><label for="OtrasCosas"><input type="checkbox" name="hobby" id="otrop">Otras cosas</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Medios de Contacto</legend>
+            <label for="Correo">Correo Electr&oacute;nico: <input type="email" id="email" required></label>
+            <br><br>
+            <label for="Telefono">Tel&eacute;fono: <input type="tel" id="telefono" pattern="[5]{2}[0-9]{8}" placeholder="55########" required> Favor de llenar de acuerdo al formato especificado: 55########</label>
+        </fieldset>
+        <fieldset>
+            <legend>Comentario</legend>
+                <textarea id="comentario" cols="100" rows="10" required></textarea><br>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar" style="width: 49.5%;">
+        <input type="reset" value="Limpiar Todo" style="width: 50%;">
+    </form>
+</body>
+</html>

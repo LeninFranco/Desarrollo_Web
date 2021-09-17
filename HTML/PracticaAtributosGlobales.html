@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Atributos Globales</title>
+    <style>
+        .parrafo1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        class -> Atributo que se usa para dar estilos en css
+        id -> Identificador unico que se utiliza para seleccionar al elemento
+        desde Javascript y para hacer navegacion a traves de anclas
+        data-* -> Atributo que permite guardar algun valor en la etiqueta HTML
+    -->
+    <p class="parrafo1">Clase</p>
+    <p id="parrafo2">Identificador</p>
+    <p id="parrafo3" data-valor="valor de la etiqueta Datos">Datos</p>
+    <script>
+        const p1 = document.getElementById("parrafo2");
+        const p2 = document.getElementById("parrafo3");
+        alert(p1.textContent);
+        alert(p2.dataset.valor);
+    </script>
+</body>
+</html>

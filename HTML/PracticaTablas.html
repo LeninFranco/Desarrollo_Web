@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de Tablas</title>
+</head>
+<body>
+    <!--
+        La estructura basica de una tabla se compone por:
+            table -> Etiqueta que encierra una tabla
+            tr -> etiqueta que construye una fila
+            td -> etiqueta que construye una celda o columna
+            caption -> Es el titulo de la tabla
+            thead -> Bloque de cabeceras de las columnas, se declara un tr y posteriormente th para 
+            cada columna (se marca en negritas)
+            tbody ->Etiqueta que ayuda a ubicar el bloque del contenido de la tabla
+        Truco: el numero de celdas dentro de un tr establecera el numero de columnas de la tabla
+        Atributos para hacer que las celdas ocupen mas de una fila o columna:
+            rowspan -> Sirve para que una celda ocupe mas de una fila
+            colspan -> Sirve para que una celda ocupe mas de una columna
+    -->
+    <h1>Ejemplo de tabla</h1>
+    <table border="1" style="text-align: center;">
+        <caption>Horario de Clase</caption>
+        <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>09:00 - 10:00</td>
+                <td>Ingles</td>
+                <td>Español</td>
+                <td>Ciencia</td>
+                <td>Deportes</td>
+                <td>Español</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:00</td>
+                <td>Matematicas</td>
+                <td>Geografia</td>
+                <td>Matematicas</td>
+                <td>Ingles</td>
+                <td>Matematicas</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:00</td>
+                <td>Geografia</td>
+                <td>Civismo</td>
+                <td>Historia</td>
+                <td>Español</td>
+                <td>Ingles</td>
+            </tr>
+            <tr>
+                <td>12:00 - 12:30</td>
+                <td colspan="5">Recreo</td>
+            </tr>
+            <tr>
+                <td>12:30 - 1:30</td>
+                <td>Español</td>
+                <td>Matematicas</td>
+                <td>Deportes</td>
+                <td>Historia</td>
+                <td>Deportes</td>
+            </tr>
+            <tr>
+                <td>1:30 - 2:30</td>
+                <td>Deportes</td>
+                <td>Ingles</td>
+                <td>Ingles</td>
+                <td>Civismo</td>
+                <td>Civismo</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
