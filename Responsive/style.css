@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
+.encabezado{
+    background-color: gray;
+    padding: 5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    border: 1px solid black;
+    background-color: gray;
+}
+
+.menu ol{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li{
+    padding: 10px 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu li:hover{
+    background: rgb(0,0,0,0.3);
+    transition: 0.2s;
+}
+
+.principal{
+    display: flex;
+}
+
+.uno{
+    width: 33.33%;
+    padding: 10px;
+    background-color: green;
+    border: 1px solid black;
+}
+.uno *{
+    color: white;
+    text-align: justify;
+}
+
+.dos{
+    width: 33.33%;
+    padding: 10px;
+    border: 1px solid black;
+}
+.dos *{
+    text-align: justify;
+}
+
+.tres{
+    width: 33.33%;
+    padding: 10px;
+    background-color: red;
+    border: 1px solid black;
+}
+.tres *{
+    color: white;
+    text-align: justify;
+}
+
+.pie{
+    background-color: gray;
+    text-align: center;
+    border: 1px solid black;
+}
+
+@media (max-width: 800px) {
+    .principal{
+        display: inline;
+    }
+    .principal div{
+        width: 100%;
+    }
+    .menu ol{
+        display: inline;
+    }
+    .menu li{
+        border-bottom: 1px solid black;
+    }
+}
