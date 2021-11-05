@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.: Registro de Productos:.</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/slate/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary navbar navbar-expand-lg sticky-top">
+        <a href="/" class="navbar-brand">Productos App</a>
+        <div class="d-flex">
+            <a href="/" class="navbar-brand">Hecho por Lenin Franco</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="App" class="row pt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Producto</div>
+                        <form id="productForm" class="card-body">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Nombre del Producto" class="form-control" required>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <input type="number" id="price" step="0.01" min="0.00" placeholder="Precio Unitario" class="form-control" required>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <input type="number" id="stock" min="0" placeholder="Unidades Disponibles" class="form-control" required>
+                            </div>
+                            <br>
+                            <div class="d-grid">
+                                <input type="submit" value="Guardar" class="btn btn-primary">
+                            </div>
+                            <br>
+                            <div class="d-grid">
+                                <input type="reset" value="Limpiar" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+            </div>
+            <div class="col-md-8">
+                <table id="product-list" class="table table-hover">
+                    <tr class="table-primary">
+                        <th>Producto</th>
+                        <th>Precio Unitario</th>
+                        <th>Unidades Disponibles</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="JS/script-copy.js" type="text/javascript"></script>
+</html>
