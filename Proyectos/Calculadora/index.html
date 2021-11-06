@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.: Calculadora :.</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/slate/bootstrap.min.css">
+</head>
+<body>
+    <div class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Calculadora</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-md-auto">
+                    <li class="nav-item">Lenin Franco</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Suma</div>
+                    <div class="card-body" id="suma">
+                        <form>
+                            <input type="number" id="num1" step="0.01" value="0" placeholder="Numero 1" class="form-control" required>
+                            <br>
+                            <input type="number" id="num2" step="0.01" value="0" placeholder="Numero 2" class="form-control" required>
+                            <br>
+                            <input class="form-control" id="res1" type="text" readonly>
+                            <br>
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary" onclick="suma()">Calcular</button>
+                            </div>
+                            <br>
+                            <div class="d-grid">
+                                <input type="reset" value="Limpiar" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Resta</div>
+                    <div class="card-body" id="resta">
+                        <form>
+                            <input type="number" id="num3" step="0.01" value="0" placeholder="Numero 1" class="form-control" required>
+                            <br>
+                            <input type="number" id="num4" step="0.01" value="0" placeholder="Numero 2" class="form-control" required>
+                            <br>
+                            <input class="form-control" id="res2" type="text" readonly>
+                            <br>
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary" onclick="resta()">Calcular</button>
+                            </div>
+                            <br>
+                            <div class="d-grid">
+                                <input type="reset" value="Limpiar" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Multiplicación</div>
+                    <div class="card-body" id="multi">
+                        <form>
+                            <input type="number" id="num5" step="0.01" value="0" placeholder="Numero 1" class="form-control" required>
+                            <br>
+                            <input type="number" id="num6" step="0.01" value="0" placeholder="Numero 2" class="form-control" required>
+                            <br>
+                            <input class="form-control" id="res3" type="text" readonly>
+                            <br>
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary" onclick="multi()">Calcular</button>
+                            </div>
+                            <br>
+                            <div class="d-grid">
+                                <input type="reset" value="Limpiar" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">División</div>
+                    <div class="card-body" id="divi">
+                        <form>
+                            <input type="number" id="num7" step="0.01" value="0" placeholder="Numero 1" class="form-control" required>
+                            <br>
+                            <input type="number" id="num8" step="0.01" value="0" placeholder="Numero 2" class="form-control" required>
+                            <br>
+                            <input class="form-control" id="res4" type="text" readonly>
+                            <br>
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary" onclick="divi()">Calcular</button>
+                            </div>
+                            <br>
+                            <div class="d-grid">
+                                <input type="reset" value="Limpiar" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
